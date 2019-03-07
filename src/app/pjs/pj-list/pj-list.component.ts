@@ -21,9 +21,9 @@ export class PJListComponent implements OnInit {
     this.service.formData = Object.assign({}, emp);
   }
 
-  onDelete(id: number) {
+  onDelete(emp: PJ) {
     if (confirm('Are you sure to delete this record?')) {
-      this.service.deletePJ(id).subscribe(res => {
+      this.service.deletePJ(emp).subscribe(res => {
         this.service.refreshList();
         this.toastr.warning('Deleted successfully', 'EMP. Register');
       });

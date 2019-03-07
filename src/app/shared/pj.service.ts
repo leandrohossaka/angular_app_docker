@@ -9,26 +9,25 @@ export class PJService {
 
   formData  : PJ;
   list : PJ[];
-  readonly rootURL ="http://api-server:7741/api"
+  //readonly rootURL ="http://api-server:80/api"
+  readonly rootURL ="http://api-server:80"
 
   constructor(private http : HttpClient) { }
 
   postPJ(formData : PJ){
-   return this.http.post(this.rootURL+'/PJ',formData);
-    
+   return this.http.post(this.rootURL+'/client_pj/inserir',formData);    
   }
 
   refreshList(){
-    this.http.get(this.rootURL+'/PJ')
+    this.http.get(this.rootURL+'/client_pj/listar_clientes')
     .toPromise().then(res => this.list = res as PJ[]);
   }
 
   putPJ(formData : PJ){
-    return this.http.put(this.rootURL+'/PJ/'+formData.PJID,formData);
-     
+    return this.http.post(this.rootURL+'/client_pj/alterar/',formData);     
    }
 
-   deletePJ(id : number){
-    return this.http.delete(this.rootURL+'/PJ/'+id);
+   deletePJ(formData : PJ){
+    return this.http.post(this.rootURL+'/client_pj/excluir/',formData);
    }
 }
