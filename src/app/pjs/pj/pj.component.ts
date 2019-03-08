@@ -21,13 +21,12 @@ export class PJComponent implements OnInit {
     if (form != null)
       form.resetForm();
     this.service.formData = {
-      PJID: null,
+      cnpjID: null,
       NomeFantasia: '',
-      CNPJ: '',
-      Endereco: '',
-      IE: '',
+      EnderecoPJ: '',
+      InscrEstadual: '',
+      NomeResponsavel: '',
       RazaoSocial: '',
-      Responsavel: '',
       Telefone: ''
     }
   }

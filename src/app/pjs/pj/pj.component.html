@@ -1,40 +1,10 @@
 <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
-  <input type="hidden" name="PJID" #PJID="ngModel" [(ngModel)]="service.formData.PJID">
+  <input type="hidden" name="cnpjID" #PJID="ngModel" [(ngModel)]="service.formData.cnpjID">
   <div class="form-group">
     <label>Nome Fantasia</label>
     <input name="NomeFantasia" #NomeFantasia="ngModel" [(ngModel)]="service.formData.NomeFantasia" class="form-control" required>
     <div class="validation-error" *ngIf="NomeFantasia.invalid && NomeFantasia.touched">This field is required.</div>
-  </div>
-  <div class="form-group">
-    <label>CNPJ</label>
-    <input name="CNPJ" #NomeFantasia="ngModel" [(ngModel)]="service.formData.CNPJ" class="form-control" required>
-    <div class="validation-error" *ngIf="CNPJ.invalid && CNPJ.touched">This field is required.</div>
-  </div>
-  <div class="form-group">
-    <label>Razão Social</label>
-    <input name="RazaoSocial" #NomeFantasia="ngModel" [(ngModel)]="service.formData.RazaoSocial" class="form-control" required>
-    <div class="validation-error" *ngIf="RazaoSocial.invalid && RazaoSocial.touched">This field is required.</div>
-  </div>
-  <div class="form-group">
-    <label>Endereço</label>
-    <input name="Endereco" #NomeFantasia="ngModel" [(ngModel)]="service.formData.Endereco" class="form-control" required>
-    <div class="validation-error" *ngIf="Endereco.invalid && Endereco.touched">This field is required.</div>
-  </div>
-  <div class="form-group">
-    <label>IE</label>
-    <input name="IE" #NomeFantasia="ngModel" [(ngModel)]="service.formData.IE" class="form-control" required>
-    <div class="validation-error" *ngIf="IE.invalid && IE.touched">This field is required.</div>
-  </div>
-  <div class="form-group">
-    <label>Telefone</label>
-    <input name="Telefone" #NomeFantasia="ngModel" [(ngModel)]="service.formData.Telefone" class="form-control" required>
-    <div class="validation-error" *ngIf="Telefone.invalid && Telefone.touched">This field is required.</div>
-  </div>
-  <div class="form-group">
-    <label>Responsável</label>
-    <input name="Responsavel" #NomeFantasia="ngModel" [(ngModel)]="service.formData.Responsavel" class="form-control" required>
-    <div class="validation-error" *ngIf="Responsavel.invalid && Responsavel.touched">This field is required.</div>
-  </div>
+  </div>  
   <div class="form-group">
     <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
   </div>
