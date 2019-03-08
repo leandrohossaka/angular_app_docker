@@ -16,18 +16,4 @@ export class PJListComponent implements OnInit {
   ngOnInit() {
     this.service.refreshList();
   }
-
-  populateForm(emp: PJ) {
-    this.service.formData = Object.assign({}, emp);
-  }
-
-  onDelete(emp: PJ) {
-    if (confirm('Are you sure to delete this record?')) {
-      this.service.deletePJ(emp).subscribe(res => {
-        this.service.refreshList();
-        this.toastr.warning('Deleted successfully', 'EMP. Register');
-      });
-    }
-  }
-
 }
