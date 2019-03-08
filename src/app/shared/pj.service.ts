@@ -10,7 +10,7 @@ export class PJService {
   formData  : PJ;
   list : PJ[];
   //readonly rootURL ="http://api-server:80/api"
-  readonly rootURL ="http://api-server:80"
+  readonly rootURL ="http://localhost"
 
   constructor(private http : HttpClient) { }
 
