@@ -15,19 +15,19 @@ export class PJService {
   constructor(private http : HttpClient) { }
 
   postPJ(formData : PJ){
-   return this.http.post(this.rootURL+'/client_pj/inserir',formData);    
+   return this.http.post(this.rootURL+'/cliente_pj/inserir',formData);    
   }
 
   refreshList(){
-    this.http.get(this.rootURL+'/client_pj/listar_clientes')
+    this.http.get(this.rootURL+'/cliente_pj/listar_clientes')
     .toPromise().then(res => this.list = res as PJ[]);
   }
 
   putPJ(formData : PJ){
-    return this.http.post(this.rootURL+'/client_pj/alterar/',formData);     
+    return this.http.post(this.rootURL+'/cliente_pj/alterar/',formData);     
    }
 
    deletePJ(formData : PJ){
-    return this.http.post(this.rootURL+'/client_pj/excluir/',formData);
+    return this.http.post(this.rootURL+'/cliente_pj/excluir/',formData);
    }
 }
