@@ -1,10 +1,9 @@
 export class PJ {
-    CNPJ: string;
+    cnpjID: string;
     RazaoSocial: string;
     NomeFantasia: string;
-    Endereco: string;
-    IE: string;
+    EnderecoPJ: string;
+    InscrEstadual: string;
     Telefone: string;
-    Responsavel: string;
-    PJID: number;
+    NomeResponsavel: string;
 }
